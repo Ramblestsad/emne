@@ -2,5 +2,15 @@
 name = "emne"
 version = "0.1.0"
 edition = "2024"
+authors = ["Rc <yilinw6@gmail.com>"]
+license = "MIT"
+description = "A experimental Email Newsletter Engine"
 
 [dependencies]
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
+lto = true
