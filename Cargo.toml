@@ -8,6 +8,7 @@ description = "A experimental Email Newsletter Engine"
 
 [dependencies]
 tokio = { version = "1", features = ["full"] }
+tokio-util = "0.7"
 tracing = { version = "0.1" }
 tracing-subscriber = { version = "0.3", features = [
     "env-filter",
@@ -15,6 +16,12 @@ tracing-subscriber = { version = "0.3", features = [
 ] }
 thiserror = "2"
 time = { version = "0.3", features = ["macros", "local-offset", "parsing"] }
+
+# axum libs
+axum = { version = "0.8" }
+axum-macros = "0.5"
+axum-extra = { version = "0.12", features = ["typed-header"] }
+headers = "0.4"
 
 [profile.dev]
 opt-level = 0
