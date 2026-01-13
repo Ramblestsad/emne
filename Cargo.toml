@@ -7,6 +7,14 @@ license = "MIT"
 description = "A experimental Email Newsletter Engine"
 
 [dependencies]
+tokio = { version = "1", features = ["full"] }
+tracing = { version = "0.1" }
+tracing-subscriber = { version = "0.3", features = [
+    "env-filter",
+    "local-time",
+] }
+thiserror = "2"
+time = { version = "0.3", features = ["macros", "local-offset", "parsing"] }
 
 [profile.dev]
 opt-level = 0
