@@ -8,8 +8,8 @@ use crate::config::AppConfig;
 pub async fn router() -> Result<Router, anyhow::Error> {
     // config load
     #[allow(unused)]
-    let cfg = AppConfig::new()
-        .expect("Configuration initialization failed, check pg .env settings.");
+    let cfg =
+        AppConfig::new().expect("Configuration initialization failed, check pg .env settings.");
 
     // app init
     Ok(Router::new()
@@ -20,6 +20,7 @@ pub async fn router() -> Result<Router, anyhow::Error> {
 async fn index() -> impl IntoResponse {
     "Temporary Index Result"
 }
+
 async fn health_check() -> impl IntoResponse {
     (StatusCode::OK, "duuuuu~")
 }
